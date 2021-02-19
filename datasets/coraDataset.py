@@ -16,7 +16,7 @@ class CoraDataset(object):
     filenames = ["ind.cora.{}".format(name) for name in ['x', 'tx', 'allx', 'y', 'ty',
                                                          'ally', 'graph', 'test.index']]
 
-    def __init__(self, data_path='F:\Database\cora', rebuild=False):
+    def __init__(self, data_path='../cora', rebuild=False):
         self.data_root = data_path
         save_file = os.path.join(data_path, "process_cora.pkl")
         if os.path.exists(save_file) and not rebuild:
